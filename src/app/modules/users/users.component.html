@@ -1,1 +1,33 @@
-<p>users works!</p>
+<div class="container">
+  <div style="display: flex; justify-content: space-between;">
+    <h2>Users</h2>
+    <button class="btn btn-sm btn-primary" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/users/create']"><i class="fa fa-plus" aria-hidden="true"></i> Add User</button>
+  </div>
+  <table class="table table-sm table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Email</th>
+      <th>Nick Name</th>
+      <th>Active</th>
+      <th>Role</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.nickName}}</td>
+        <td (click)="toggleActive(user)" style="cursor: pointer; color: blue;">{{user.active}}</td>
+        <td>{{user.role}}</td>
+        <td style="display: flex; justify-content: space-evenly;">
+          <button class="btn" (click)="delete(user.id)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+          <button class="btn" [routerLink]="['/users/edit', user.id]">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -5,6 +5,8 @@ import { PeopleComponent } from './modules/people/people.component';
 import { DepartmentsComponent } from './modules/departments/departments.component';
 import { UsersComponent } from './modules/users/users.component';
 import { NotFoundComponent } from './navigation/not-found/not-found.component';
+import { CreateUserComponent } from './modules/users/create/create.component';
+import { EditUserComponent } from './modules/users/edit/edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'people', component: PeopleComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'users/create', component: CreateUserComponent },
+  { path: 'users/edit/:userId', component: EditUserComponent },
 
   { path: '**', component: NotFoundComponent }
 ];

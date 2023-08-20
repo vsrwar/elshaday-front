@@ -1,1 +1,69 @@
-<p>people works!</p>
+<div class="container">
+  <h2>Legal People</h2>
+  <table class="table table-sm table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Address Id</th>
+      <th>Qualifier</th>
+      <th>CNPJ</th>
+      <th>Corporate Name</th>
+      <th>Fantasy Name</th>
+      <th>Type</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let legalPerson of legalPeople">
+        <td>{{legalPerson.id}}</td>
+        <td>{{legalPerson.addressId}}</td>
+        <td>{{legalPerson.qualifier}}</td>
+        <td>{{legalPerson.cnpj.value}}</td>
+        <td>{{legalPerson.corporateName}}</td>
+        <td>{{legalPerson.fantasyName}}</td>
+        <td>{{legalPerson.type}}</td>
+        <td style="display: flex; justify-content: space-evenly;">
+          <a href="#">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <hr>
+  
+  <h2>Physical People</h2>
+  <table class="table table-sm table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Address Id</th>
+      <th>Qualifier</th>
+      <th>CPF</th>
+      <th>Name</th>
+      <th>Nick Name</th>
+      <th>Type</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let physicalPerson of physicalPeople">
+        <td>{{physicalPerson.id}}</td>
+        <td>{{physicalPerson.addressId}}</td>
+        <td>{{physicalPerson.qualifier}}</td>
+        <td>{{physicalPerson.cpf.value}}</td>
+        <td>{{physicalPerson.name}}</td>
+        <td>{{physicalPerson.nickName}}</td>
+        <td>{{physicalPerson.type}}</td>
+        <td style="display: flex; justify-content: space-evenly;">
+          <a href="#">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

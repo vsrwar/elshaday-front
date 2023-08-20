@@ -1,7 +1,7 @@
 import { PersonQualifier } from "../enums/person-qualifier.enum";
 import { AddressRequest } from "./address.request";
 
-export interface PhysicalPersonRequestDto
+export interface PhysicalPersonRequest
 {
     Id: number | undefined;
     Address: AddressRequest;

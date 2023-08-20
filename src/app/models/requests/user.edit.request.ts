@@ -1,8 +1,8 @@
-export interface UserResponse
+export interface UserEditRequest
 {
     id: number;
     email: string;
     nickName: string;
-    active: boolean;
     role: number;
+    active: boolean;
 }
