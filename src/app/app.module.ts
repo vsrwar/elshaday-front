@@ -19,6 +19,7 @@ import { EditUserComponent } from './modules/users/edit/edit.component';
 import { ToastrModule } from 'ngx-toastr';
 import { CreatePersonComponent } from './modules/people/create/create.component';
 import { EditPersonComponent } from './modules/people/edit/edit.component';
+import { CreateDepartmentsComponent } from './modules/departments/create/create.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EditPersonComponent } from './modules/people/edit/edit.component';
     CreateUserComponent,
     EditUserComponent,
     CreatePersonComponent,
-    EditPersonComponent
+    EditPersonComponent,
+    CreateDepartmentsComponent,
   ],
   imports: [
     BrowserModule,

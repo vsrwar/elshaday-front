@@ -9,6 +9,7 @@ import { CreateUserComponent } from './modules/users/create/create.component';
 import { EditUserComponent } from './modules/users/edit/edit.component';
 import { CreatePersonComponent } from './modules/people/create/create.component';
 import { EditPersonComponent } from './modules/people/edit/edit.component';
+import { CreateDepartmentsComponent } from './modules/departments/create/create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'people/create', component: CreatePersonComponent },
   { path: 'people/edit/:personType/:personId', component: EditPersonComponent },
   { path: 'departments', component: DepartmentsComponent },
+  { path: 'departments/create', component: CreateDepartmentsComponent },
   { path: 'users', component: UsersComponent },
   { path: 'users/create', component: CreateUserComponent },
   { path: 'users/edit/:userId', component: EditUserComponent },

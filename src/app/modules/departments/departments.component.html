@@ -1,5 +1,8 @@
 <div class="container">
-  <h2>Departments</h2>
+  <div style="display: flex; justify-content: space-between;">
+    <h2>Departments</h2>
+    <button class="btn btn-sm btn-primary" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/departments/create']"><i class="fa fa-plus" aria-hidden="true"></i> Add Department</button>
+  </div>
   <table class="table table-sm table-striped">
     <thead>
       <th>Id</th>
@@ -11,12 +14,9 @@
         <td>{{department.id}}</td>
         <td>{{department.name}}</td>
         <td style="display: flex; justify-content: space-evenly;">
-          <a href="#">
+          <button class="btn" (click)="deleteDepartment(department.id)">
             <i class="fa fa-trash-o" aria-hidden="true"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
-          </a>
+          </button>
         </td>
       </tr>
     </tbody>

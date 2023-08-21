@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Create a new Department</h2>
+  <form (ngSubmit)="createDepartment()" [formGroup]="departmentForm">
+    <div class="form-group row">
+      <label for="name" class="col-4 col-form-label">Name</label> 
+      <div class="col-8">
+        <input formControlName="name" name="name" placeholder="John Doe" type="text" required="required" class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-4">For</label> 
+      <div class="col-8">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input name="radio" id="physical" type="radio" class="custom-control-input" checked value="1" required="required" (change)="personType = 'physical'"> 
+          <label for="physical" class="custom-control-label">Physical</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input name="radio" id="legal" type="radio" class="custom-control-input" value="2" required="required" (change)="personType = 'legal'"> 
+          <label for="legal" class="custom-control-label">Legal</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="select" class="col-4 col-form-label">Responsible</label> 
+      <div class="col-8" [ngSwitch]="personType">
+        <select formControlName="responsibleId" name="select" class="custom-select" required="required" *ngSwitchCase="'physical'">
+          <option *ngFor="let person of availablePhysicalPeople" [value]="person.id">{{person.name}}</option>
+        </select>
+        <select formControlName="responsibleId" name="select" class="custom-select" required="required" *ngSwitchCase="'legal'">
+          <option *ngFor="let person of availableLegalPeople" [value]="person.id">{{person.corporateName}}</option>
+        </select>
+      </div>
+    </div> 
+    <div class="form-group row">
+      <div class="offset-4 col-8">
+        <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>  
+</div>

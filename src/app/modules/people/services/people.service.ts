@@ -57,6 +57,11 @@ export class PeopleService {
         .delete<any>(`${this.basePhysicalPersonUrl}/${id}`, this.httpOptions);
     }
 
+    getPhysicalPeopleForDepartments(): Observable<PhysicalPersonResponse[]> {
+      return this.http
+        .get<PhysicalPersonResponse[]>(`${this.basePhysicalPersonUrl}/available-for-department`, this.httpOptions);
+    }
+
     // For legal person
     createLegalPerson(request: LegalPersonRequest): Observable<LegalPersonResponse> {
       return this.http
@@ -81,5 +86,10 @@ export class PeopleService {
     deleteLegalPerson(id: number): Observable<any> {
       return this.http
         .delete<any>(`${this.baseLegalPersonUrl}/${id}`, this.httpOptions);
+    }
+
+    getLegalPeopleForDepartments(): Observable<LegalPersonResponse[]> {
+      return this.http
+        .get<LegalPersonResponse[]>(`${this.baseLegalPersonUrl}/available-for-department`, this.httpOptions);
     }
 }
