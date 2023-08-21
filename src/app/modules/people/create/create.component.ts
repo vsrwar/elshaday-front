@@ -77,9 +77,9 @@ export class CreatePersonComponent implements OnInit {
           });
           this.router.navigate(['/people']);
         },
-        error: (error) => {
-          console.log(error);
-          this.toastr.error(error.message, 'Error', {
+        error: (err) => {
+          console.log(err);
+          this.toastr.error(err.error, 'Error', {
             progressBar: true,
             closeButton: true
           });
@@ -131,9 +131,9 @@ export class CreatePersonComponent implements OnInit {
           });
           this.router.navigate(['/people']);
         },
-        error: (error) => {
-          console.log(error);
-          this.toastr.error(error.message, 'Error', {
+        error: (err) => {
+          console.log(err);
+          this.toastr.error(err.error, 'Error', {
             progressBar: true,
             closeButton: true
           });

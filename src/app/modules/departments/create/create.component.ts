@@ -67,9 +67,9 @@ export class CreateDepartmentsComponent implements OnInit {
               });
               this.router.navigate(['/departments']);
             },
-            error: (error) => {
-              console.log(error);
-              this.toastr.error(error.message, 'Error', {
+            error: (err) => {
+              console.log(err);
+              this.toastr.error(err.error, 'Error', {
                 progressBar: true,
                 closeButton: true
               });
@@ -87,9 +87,9 @@ export class CreateDepartmentsComponent implements OnInit {
               });
               this.router.navigate(['/departments']);
             },
-            error: (error) => {
-              console.log(error);
-              this.toastr.error(error.message, 'Error', {
+            error: (err) => {
+              console.log(err);
+              this.toastr.error(err.error, 'Error', {
                 progressBar: true,
                 closeButton: true
               });
