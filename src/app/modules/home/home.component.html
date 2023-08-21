@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <app-card-home [total]="countLegalPeople" title="Legal People"></app-card-home>
+    </div>
+    <div class="col-md-3">
+        <app-card-home [total]="countPhysicalPeople" title="Physical People"></app-card-home>
+    </div>
+    <div class="col-md-3">
+        <app-card-home [total]="countDepartments" title="Departments"></app-card-home>
+    </div>
+    <div class="col-md-3">
+        <app-card-home [total]="countUsers" title="Users"></app-card-home>
+    </div>
+  </div>
+</div>

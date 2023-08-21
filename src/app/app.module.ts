@@ -12,7 +12,6 @@ import { DepartmentsComponent } from './modules/departments/departments.componen
 import { UsersComponent } from './modules/users/users.component';
 import { NotFoundComponent } from './navigation/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DepartmentService } from './modules/departments/services/department.service';
 import { CreateUserComponent } from './modules/users/create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditUserComponent } from './modules/users/edit/edit.component';
@@ -20,6 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CreatePersonComponent } from './modules/people/create/create.component';
 import { EditPersonComponent } from './modules/people/edit/edit.component';
 import { CreateDepartmentsComponent } from './modules/departments/create/create.component';
+import { CardComponent } from './modules/home/card/card.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,7 @@ import { CreateDepartmentsComponent } from './modules/departments/create/create.
     CreatePersonComponent,
     EditPersonComponent,
     CreateDepartmentsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +47,7 @@ import { CreateDepartmentsComponent } from './modules/departments/create/create.
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
   ],
-  providers: [
-    DepartmentService
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
