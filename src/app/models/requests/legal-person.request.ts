@@ -3,10 +3,10 @@ import { AddressRequest } from "./address.request";
 
 export interface LegalPersonRequest
 {
-    Id: number | undefined;
-    Address: AddressRequest;
-    Qualifier: PersonQualifier;
-    Cnpj: string;
-    CorporateName: string;
-    FantasyName: string | undefined;
+    id: number | undefined;
+    address: AddressRequest;
+    qualifier: PersonQualifier;
+    cnpj: string;
+    corporateName: string;
+    fantasyName: string | undefined;
 }

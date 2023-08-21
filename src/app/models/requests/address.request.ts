@@ -1,13 +1,14 @@
 export interface AddressRequest
 {
-    Cep: string;
-    Logradouro: string;
-    Complemento: string;
-    Bairro: string;
-    Localidade: string;
-    Uf: string;
-    Ibge: string;
-    Gia: string;
-    Ddd: string;
-    Siafi: string;
+    cep: string;
+    logradouro: string;
+    complemento: string;
+    bairro: string;
+    localidade: string;
+    uf: string;
+    ibge: string;
+    gia: string;
+    ddd: string;
+    siafi: string;
+    numero: string;
 }

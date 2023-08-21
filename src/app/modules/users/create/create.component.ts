@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-create',
+  selector: 'app-create-user',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })

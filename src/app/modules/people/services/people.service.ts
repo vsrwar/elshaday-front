@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AddressRequest } from 'src/app/models/requests/address.request';
 import { LegalPersonRequest } from 'src/app/models/requests/legal-person.request';
 import { PhysicalPersonRequest } from 'src/app/models/requests/physical-person.request';
 import { LegalPersonResponse } from 'src/app/models/responses/legal-person.response';
@@ -23,6 +24,12 @@ export class PeopleService {
   
     baseLegalPersonUrl = `${environment.apiUrl}/LegalPerson`;
     basePhysicalPersonUrl = `${environment.apiUrl}/PhysicalPerson`;
+    baseViaCepUrl = `${environment.viaCepUrl}`;
+
+    getAddressesByCep(cep: string): Observable<AddressRequest> {
+      return this.http
+        .get<AddressRequest>(`${this.baseViaCepUrl}/${cep}/json/`);
+    }
 
     // For Physical person
     createPhysicalPerson(request: PhysicalPersonRequest): Observable<PhysicalPersonResponse> {

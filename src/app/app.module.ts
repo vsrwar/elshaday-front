@@ -17,6 +17,8 @@ import { CreateUserComponent } from './modules/users/create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditUserComponent } from './modules/users/edit/edit.component';
 import { ToastrModule } from 'ngx-toastr';
+import { CreatePersonComponent } from './modules/people/create/create.component';
+import { EditPersonComponent } from './modules/people/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ToastrModule } from 'ngx-toastr';
     DepartmentsComponent,
     UsersComponent,
     CreateUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    CreatePersonComponent,
+    EditPersonComponent
   ],
   imports: [
     BrowserModule,

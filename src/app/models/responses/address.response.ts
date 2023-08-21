@@ -11,4 +11,5 @@ export interface AddressResponse
     gia: string;
     ddd: string;
     diafi: string;
+    numero: string;
 }

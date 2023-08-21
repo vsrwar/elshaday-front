@@ -8,7 +8,7 @@ import { UserEditRequest } from 'src/app/models/requests/user.edit.request';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'app-edit-user',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss']
 })
@@ -44,6 +44,7 @@ export class EditUserComponent implements OnInit {
       .pipe(first())
       .subscribe((data: UserResponse) => {
         this.editUserForm.patchValue(data);
+        this.editUserForm.controls['email'].disable();
         this.user = data;
       });
   }
